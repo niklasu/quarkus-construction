@@ -13,7 +13,7 @@ public class LifecycleHooks {
     private static final Logger LOGGER = Logger.getLogger("ListenerBean");
 
     void onStart(@Observes StartupEvent ev) {
-        LOGGER.info("The application is starting...");
+        LOGGER.info("The application is starting in " + io.quarkus.runtime.LaunchMode.current() + " mode");
     }
 
     void onStop(@Observes ShutdownEvent ev) {
