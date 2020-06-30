@@ -46,7 +46,7 @@ RUN microdnf install curl ca-certificates ${JAVA_PACKAGE} \
 ENV JAVA_OPTIONS="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
 
 #COPY target/lib/* /deployments/lib/
-COPY /workspace/repo/target/*-runner.jar /deployments/app.jar
+COPY /workspace/repo/target/construction-quarkus-1.0-SNAPSHOT-runner.jar /deployments/app.jar
 
 EXPOSE 8080
 USER 1001
